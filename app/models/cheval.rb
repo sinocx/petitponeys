@@ -1,8 +1,8 @@
 class Cheval < ApplicationRecord
-
-	def new
-	    @chevals = Cheval.new # needed to instantiate the form_for
-	end
+	
+	validates :nom, uniqueness: true, presence: true
+	validates :age , presence: true
+	validates :description, presence: true
 
 
 
