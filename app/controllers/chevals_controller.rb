@@ -5,16 +5,17 @@ class ChevalsController < ApplicationController
   end
 
 	def new
-	    @chevals = Cheval.new # needed to instantiate the form_for
+	    @cheval = Cheval.new # needed to instantiate the form_for
 	end
 
   def create
     @cheval = Cheval.new(cheval_params)
-    @cheval.save
 
     # no need for app/views/restaurants/create.html.erb
     if @cheval.save
-	    	redirect_to cheval_path(@cheval)
+	    redirect_to cheval_path(@cheval)
+    else
+      render :new
 	  end
   end
   
@@ -22,7 +23,9 @@ class ChevalsController < ApplicationController
     @cheval = Cheval.find(params[:id])
 
     if @cheval.update(cheval_params)
-        redirect_to cheval_path(@cheval)
+      redirect_to cheval_path(@cheval)
+    else
+      render :new
     end    # Will raise ActiveModel::ForbiddenAttributesError
   end
 

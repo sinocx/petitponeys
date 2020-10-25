@@ -1,2 +1,45 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+
+<div class="banner" style = "background-image: url(/assets/petitponey.jpg);">
+	<div class="banner-content">
+		<h1>Petit Poney</h1>
+		<p>Chevauche en toute tranquillité</p>
+		<% if  user_signed_in? %>
+			<% if current_user.admin == true %>
+				<%= link_to "Gerer les cours", new_user_session_path, class: "button" %>
+			<% end %>
+		<% else %>
+				<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
+		<% end %>
+	</div>
+</div>
+<!-- <header>
+	<div class="overlay">
+		<h1>PetitPoney</h1>
+		<h3>Chevauche en toute sécurité</h3>
+		<br>
+		<% if  user_signed_in? %>
+			<% if current_user.admin == true %>
+				<%= link_to "Gerer les cours", new_user_session_path, class: "button" %>
+			<% end %>
+		<% else %>
+				<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
+		<% end %>
+	</div>
+</header> -->
+<div class="container">
+	<div class="row">
+		<div class = "col-lg-4 col-sm-12 info">
+		<%= image_tag "petitponey.jpg", class: "img-info" %>
+		</div>
+		<div class = "col-lg-4 col-sm-12 info">
+		   <%= image_tag "petitponey.jpg", class: "img-info" %>
+	    </div>
+		<div class = "col-lg-4 col-sm-12 info">
+		   <%= image_tag "petitponey.jpg", class: "img-info" %>
+	    </div>
+	</div>
+</div>
+
+
+ 

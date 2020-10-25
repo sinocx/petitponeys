@@ -1,5 +1,12 @@
-<%= form_for(@chevals) do |f| %>
-  <%= f.label :nom %>
-  <%= f.text_field :nom %>
-  <%= f.submit %>
-<% end %>
+<div class="container">	
+	<div class="col-sm-12">
+		<%= simple_form_for @cheval, url: chevals_path, method: :post,  remote: true do |f| %>
+		   <%= f.error_notification %>
+		   <%= f.input :nom %>
+		   <%= f.input :naissance %>
+		   <%= f.input :description %>
+		   <%= f.button :submit, class: "btn-primary" %>
+		   <%= f.button :button, class: "btn-outline-secondary" %>
+		<% end %>
+	</div>	
+</div> 
