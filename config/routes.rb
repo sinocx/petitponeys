@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "cours/planning" => "cours#planning"
   devise_for :moniteurs
   devise_for :users
   root to: 'pages#home'

@@ -1,5 +1,8 @@
 class CoursController < ApplicationController
 
+    def planning
+    end
+
     def show
       @cour = Cour.find(params[:id])
     end
