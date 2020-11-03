@@ -17,7 +17,7 @@ document.addEventListener('turbolinks:load', function() {
         },
     navLinks: true,
     eventLimit: true,
-    lang: 'fr',
+    locale: 'fr',
     events: {url: '/cours.json'},
     color: 'yellow',    // an option!
     textColor: 'black',
