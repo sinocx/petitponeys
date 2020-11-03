@@ -888,6 +888,22 @@
     "@fullcalendar/common" "~5.3.1"
     tslib "^2.0.0"
 
+"@fullcalendar/moment-timezone@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/moment-timezone/-/moment-timezone-5.3.1.tgz#6dadf04cee80d5cf70ed68b160a77ee9341bfb08"
+  integrity sha512-/a9bzQa4ZCZfT5gNeC2Sxa4CENAiNBAApBQ+BjncWf2orGNHRa0PPnFvRANQr2RZ2BMCr7QE5hbxcgxzECj4yw==
+  dependencies:
+    "@fullcalendar/common" "~5.3.1"
+    tslib "^2.0.0"
+
+"@fullcalendar/moment@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/moment/-/moment-5.3.1.tgz#c8918f7a363cfbcce835d9b837145940305adafc"
+  integrity sha512-wq1KS3R3LuO/pIvmmFPQjdATsdApKjAOoNt7iXUKBvCKkcUnYn+psv+jSF/xKR/7H8QFApsgDSnMhbpPBYqzIg==
+  dependencies:
+    "@fullcalendar/common" "~5.3.1"
+    tslib "^2.0.0"
+
 "@fullcalendar/timegrid@^5.3.1":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@fullcalendar/timegrid/-/timegrid-5.3.1.tgz#c56d3c62b366eea701ef002adbbf999713648d9b"
