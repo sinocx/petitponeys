@@ -31,6 +31,6 @@ document.addEventListener('turbolinks:load', function() {
     weekends: false,
     selectable: true,
   });
-
+  
   calendar.render();
 });
