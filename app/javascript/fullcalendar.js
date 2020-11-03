@@ -17,9 +17,15 @@ document.addEventListener('turbolinks:load', function() {
         },
     navLinks: true,
     eventLimit: true,
-    lang: 'fr',
+    locale: 'fr',
+    timeZone: 'Europe/Paris',
     events: {url: '/cours.json'},
-    color: 'yellow',    // an option!
+    //BackgroundColor: '#ED1317',
+    //eventColor: '#378006',
+    //eventTextColor: 'red',
+    allDay: true,
+    display: 'block',
+    //color: 'yellow',    // an option!
     textColor: 'black',
     height: 900,
     weekends: false,
