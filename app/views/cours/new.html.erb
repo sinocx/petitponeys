@@ -1,12 +1,15 @@
-<div id="calendar"></div>
+
 
 
 <div class="container">	
 	<div class="col-sm-12">
 		<%= simple_form_for @cour, url: cours_path, method: :post,  remote: true do |f| %>
 		   <%= f.error_notification %>
-		   <%= f.association :moniteur, collection: @moniteurs, as: :select %>
-		   <%= f.input :heure_date%>
+		    <%= f.association :moniteur, collection: @moniteurs, as: :select %>
+		   <%= f.input :title%>
+		   <%= f.input :start_time%>
+		   <%= f.input :end_time%>
+		   <%= f.input :description%>
 		   <%= f.button :submit, class: "btn-primary" %>
 		   <%= f.button :button, class: "btn-outline-secondary" %>
 		<% end %>

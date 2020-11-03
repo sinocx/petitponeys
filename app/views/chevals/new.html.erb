@@ -2,6 +2,7 @@
 	<div class="col-sm-12">
 		<%= simple_form_for @cheval, url: chevals_path, method: :post,  remote: true do |f| %>
 		   <%= f.error_notification %>
+		  
 		   <%= f.input :nom %>
 		   <%= f.input :naissance %>
 		   <%= f.input :description %>
