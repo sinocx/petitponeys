@@ -1,6 +1,7 @@
 class CoursController < ApplicationController
 
-    def planning
+    def index
+    	@cours = Cour.all
     end
 
     def show
@@ -14,10 +15,9 @@ class CoursController < ApplicationController
 
     def create
 	    @cour = Cour.new(cour_params)
-
 	    
 	    if @cour.save
-		    redirect_to cour_path(@cour)
+		    redirect_to cours_path
 	    else
 	      render :new
 		end
@@ -40,6 +40,6 @@ class CoursController < ApplicationController
 	private
 
 	def cour_params
-		params.require(:cour).permit(:moniteur_id, :heure_date)
+		params.require(:cour).permit(:moniteur_id, :start_time, :end_time, :title, :description)
 	end
 end

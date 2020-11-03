@@ -25,7 +25,10 @@ ActiveRecord::Schema.define(version: 2020_10_28_113653) do
 
   create_table "cours", force: :cascade do |t|
     t.bigint "moniteur_id", null: false
-    t.datetime "heure_date"
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["moniteur_id"], name: "index_cours_on_moniteur_id"
