@@ -56,11 +56,11 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
-    autoprefixer-rails (10.0.1.0)
+    autoprefixer-rails (10.0.1.2)
       execjs
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootsnap (1.4.8)
+    bootsnap (1.5.0)
       msgpack (~> 1.0)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
@@ -83,7 +83,7 @@ GEM
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.13.1)
-    font-awesome-sass (5.13.0)
+    font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     fullcalendar-rails (3.9.0.0)
       jquery-rails (>= 4.0.5, < 5.0.0)
@@ -224,7 +224,7 @@ GEM
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.0)
+    zeitwerk (2.4.1)
 
 PLATFORMS
   ruby
@@ -260,7 +260,7 @@ DEPENDENCIES
   webpacker (~> 4.0)
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 2.7.0p0
 
 BUNDLED WITH
    2.1.4
