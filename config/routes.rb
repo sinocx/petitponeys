@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :chevals
-  resources :cours
+  resources :cours do 
+  	resources :reservation_cheval
+  end
   get '/login/chooseUser', to: "pages#chooseUser"
   #  get 'chevals/new', to: "chevals#new", as: 'cheval_new'
   # post 'chevals/new', to: "chevals#create", as: 'cheval_create'
