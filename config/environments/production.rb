@@ -1,10 +1,10 @@
 Rails.application.configure do
   config.action_mailer.default_url_options = { host: "https://petitponeys.herokuapp.com" }
   # Settings specified here will take precedence over those in config/application.rb.
-  
+
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  config.assets.compile = true
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
@@ -36,7 +36,6 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
