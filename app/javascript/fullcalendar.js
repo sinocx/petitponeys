@@ -8,7 +8,7 @@ document.addEventListener('turbolinks:load', function() {
 
   var calendar = new Calendar(calendarEl, {
     
-    plugins: [timeGridPlugin,dayGridPlugin,listPlugin],
+    plugins: [timeGridPlugin ,dayGridPlugin,listPlugin],
 
     initialView: 'timeGridWeek',
     timeZone: 'Europe/Paris',
