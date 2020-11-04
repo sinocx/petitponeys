@@ -1,5 +1,6 @@
 import { Calendar } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 
 document.addEventListener('turbolinks:load', function() {
@@ -7,7 +8,7 @@ document.addEventListener('turbolinks:load', function() {
 
   var calendar = new Calendar(calendarEl, {
     
-    plugins: [dayGridPlugin,listPlugin],
+    plugins: [timeGridPlugin,dayGridPlugin,listPlugin],
 
     initialView: 'timeGridWeek',
     timeZone: 'Europe/Paris',
