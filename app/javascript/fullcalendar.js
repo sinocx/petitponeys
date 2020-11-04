@@ -23,7 +23,7 @@ document.addEventListener('turbolinks:load', function() {
     timeZone: 'Europe/Paris',
     events: {url: '/cours.json'},
     //BackgroundColor: '#ED1317',
-    //eventColor: '#378006',
+    eventColor: '#378006',
     //eventTextColor: 'red',
     allDay: true,
     display: 'block',
