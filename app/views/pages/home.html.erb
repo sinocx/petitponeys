@@ -2,7 +2,8 @@
 
 <div class="banner image-accueil ">
 	<div class="banner-content">
-		<h1>Petit Poney</h1>
+		<div class="form-login">
+			<h2>Petit Poney</h2>
 		<p>Chevauche en toute tranquillité</p>
 		<% if  user_signed_in? %>
 			<% if current_user.admin == true %>
@@ -11,6 +12,7 @@
 		<% else %>
 				<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
 		<% end %>
+		</div>	
 	</div>
 </div>
 <!-- <header>
@@ -40,6 +42,5 @@
 	    </div>
 	</div>
 </div>
-
 
  
