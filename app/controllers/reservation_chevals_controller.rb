@@ -6,19 +6,19 @@ class ReservationChevalsController < ApplicationController
 	end
 
   def create
-
   	@user = current_user
 
     @cour = Cour.find(params[:cour_id])
 
-    @reservation_cheval = ReservationCheval.new(reservation_cheval_params)
-
-    @reservation_cheval.user_id = @user
+    @reservation_cheval = ReservationCheval.new()
+    @reservation_cheval.user = @user
+    @reservation_cheval.cour = @cour
+    @reservation_cheval.cheval_id = 1
 
     if @reservation_cheval.save
-	    redirect_to root
+	    redirect_to cour_path(@cour)
     else
-      render :new
+      redirect_to cour_path(@cour), notice: "Failed"
 	  end
 
   end

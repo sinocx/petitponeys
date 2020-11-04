@@ -2,6 +2,7 @@ class ChevalsController < ApplicationController
 
   def show
     @cheval = Cheval.find(params[:id])
+    
   end
 
 	def new

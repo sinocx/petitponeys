@@ -1,9 +1,6 @@
 <div class="container">	
 	<div class="col-sm-12">
-		<%= simple_form_for([@cour, @reservation_cheval]) do |f| %>
-		   <%= f.error_notification %>
-		   <%= f.button :submit, class: "btn-primary" %>
-		   <%= f.button :button, class: "btn-outline-secondary" %>
-		<% end %>
+	 	<%= link_to "s'inscrire", cour_reserv_create_path(@cour), method: :post%>
 	</div>	
 </div> 
+ 
