@@ -10,7 +10,7 @@ class CoursController < ApplicationController
 
 	def new
 	  @cour = Cour.new # needed to instantiate the form_for
-	  @moniteurs = Moniteur.all
+	  @moniteurs = User.where(moniteur: true).take
 	end
 
     def create

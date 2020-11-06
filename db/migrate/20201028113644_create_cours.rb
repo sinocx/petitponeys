@@ -1,7 +1,7 @@
 class CreateCours < ActiveRecord::Migration[6.0]
   def change
     create_table :cours do |t|
-      t.references :moniteur, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true
       t.string :title
       t.text :description
       t.datetime :start_time
