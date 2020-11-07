@@ -1,7 +1,7 @@
 class CoursController < ApplicationController
 
     def index
-    	@cours = Cour.all
+      @cours = Cour.all
     end
 
     def show
@@ -10,7 +10,7 @@ class CoursController < ApplicationController
 
 	def new
 	  @cour = Cour.new # needed to instantiate the form_for
-	  @moniteurs = User.where(moniteur: true).take
+	  @moniteurs = User.where(moniteur: true)
 	end
 
     def create
@@ -40,6 +40,6 @@ class CoursController < ApplicationController
 	private
 
 	def cour_params
-		params.require(:cour).permit(:moniteur_id, :start_time, :end_time, :title, :description)
+		params.require(:cour).permit(:user_id, :start_time, :end_time, :title, :description)
 	end
 end
