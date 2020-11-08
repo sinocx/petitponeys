@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+15.times do |n|
+	cheval = Faker::FunnyName.name 
+	description = Faker::Lorem.sentence(word_count: 1)
+	birth = Faker::Date.backward(days: 200)
+	cheval = Cheval.create!(
+		nom: cheval,
+		description: description,
+		naissance: birth)
+end

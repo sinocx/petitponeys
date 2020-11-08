@@ -8,7 +8,7 @@ document.addEventListener('turbolinks:load', function() {
 
   var calendar = new Calendar(calendarEl, {
     
-    plugins: [timeGridPlugin,dayGridPlugin,listPlugin],
+    plugins: [timeGridPlugin ,dayGridPlugin,listPlugin],
 
     initialView: 'timeGridWeek',
     timeZone: 'Europe/Paris',
@@ -23,7 +23,7 @@ document.addEventListener('turbolinks:load', function() {
     timeZone: 'Europe/Paris',
     events: {url: '/cours.json'},
     //BackgroundColor: '#ED1317',
-    //eventColor: '#378006',
+    eventColor: '#378006',
     //eventTextColor: 'red',
     allDay: true,
     display: 'block',
@@ -35,6 +35,6 @@ document.addEventListener('turbolinks:load', function() {
     selectable: true,
     editable: true,
   });
-
+  
   calendar.render();
 });
