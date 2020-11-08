@@ -1,0 +1,12 @@
+
+<div class="container">	
+	<div class="col-sm-12">
+		<%= simple_form_for @reservation_cheval, url: cour_reserv_create_path(@cour,@reservation_cheval), method: :post,  remote: true do |f| %>
+		    <%= f.error_notification %>
+		    <%= f.association :cheval, collection: @chevals, as: :select %>
+			<%= f.association :cour, collection: @cours, as: :select %>
+		    <%= f.button :submit, class: "btn-primary" %>
+		    <%= f.button :button, class: "btn-outline-secondary" %>
+		<% end %>
+	</div>	
+</div>  
