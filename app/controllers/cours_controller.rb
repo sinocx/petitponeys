@@ -6,6 +6,9 @@ class CoursController < ApplicationController
 
     def show
       @cour = Cour.find(params[:id])
+      booked_chevals = Cheval.joins(:reservationChevals).distinct
+      all_chevals = Cheval.all
+      @cheval_not_bookeds = all_chevals - booked_chevals 
     end
 
 	def new

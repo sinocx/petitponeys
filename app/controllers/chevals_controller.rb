@@ -6,7 +6,7 @@ class ChevalsController < ApplicationController
   end
 
 	def new
-	    @cheval = Cheval.new # needed to instantiate the form_for
+	  @cheval = Cheval.new # needed to instantiate the form_for
 	end
 
   def create

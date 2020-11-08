@@ -4,14 +4,14 @@
 	<div class="banner-content">
 		<div class="form-login">
 			<h2>Petit Poney</h2>
-		<p>Chevauche en toute tranquillité</p>
-		<% if  user_signed_in? %>
-			<% if current_user.admin == true %>
-				<%= link_to "Gerer les cours", new_user_session_path, class: "button" %>
+			<p>Chevauche en toute tranquillité</p>
+			<% if  user_signed_in? %>
+				<% if current_user.admin == true %>
+					<%= link_to "Gerer les cours", new_user_session_path, class: "button" %>
+				<% end %>
+			<% else %>
+					<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
 			<% end %>
-		<% else %>
-				<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
-		<% end %>
 		</div>	
 	</div>
 </div>
