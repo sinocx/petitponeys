@@ -9,7 +9,7 @@ class Cheval < ApplicationRecord
 	scope :available_now, -> do
 	    unavailable_horses_ids = left_joins(:cours).
 	    where(
-	      'start_time < :now OR end_time < :now',
+	      'end_time < :now',
 	      now: Time.zone.now
 	    ).pluck(:id)    
 	    where.not(id: unavailable_horses_ids)
@@ -18,7 +18,7 @@ class Cheval < ApplicationRecord
   	def to_label
   		"#{id} - #{nom}"
   	end
-
+  	
   	def age
   		((Time.zone.now - naissance.to_time) / 1.year.seconds).floor
   	end
