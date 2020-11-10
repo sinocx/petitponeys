@@ -1,6 +1,19 @@
+
 <div class="container">	
 	<div class="col-sm-12">
-	 	<%= link_to "s'inscrire", cour_reserv_create_path(@cour,@user), method: :post%>
+	<% if current_user.moniteur = false %>
+		<% if @reservations.user_id = current_user %>
+	 		<p>Vous etes deja inscrit</p>	
+	 	<% else %>
+			<%= link_to "s'inscrire", cour_reserv_create_path(@cour,@user), method: :post%>
+	 	<% end %>
+	<% else %>
+		<% @reservations.each do |reserv| %>
+			<% reserv.user_id %>
+			<% reserv.cour_id %>
+			<% reserv.user_id %>
+		<% end %>
+	<% end %>
 	</div>	
 </div> 
  

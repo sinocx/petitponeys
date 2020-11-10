@@ -5,7 +5,6 @@
 	<div class="col-sm-12">
 		<%= simple_form_for @cour, url: cours_path, method: :post,  remote: true do |f| %>
 		   <%= f.error_notification %>
-		    <%= f.association :user, collection: @moniteurs, as: :select %>
 		   <%= f.input :title%>
 		   <%= f.input :start_time%>
 		   <%= f.input :end_time%>

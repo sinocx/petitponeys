@@ -6,17 +6,22 @@ class CoursController < ApplicationController
 
     def show
       @cour = Cour.find(params[:id])
+      @reservation = ReservationCheval.find(@cour.id)
+      @reservations = ReservationCheval.where(cour_id: @cour.id)
     end
 
 	def new
 	  @cour = Cour.new # needed to instantiate the form_for
-	  @moniteurs = User.where(moniteur: true)
 	end
 
     def create
 	    @cour = Cour.new(cour_params)
-	    
+	    @cour.user = current_user
 	    if @cour.save
+	    	params[:place].times do |i|
+	    		rc = ReservationCheval.create()
+	    		rc.save
+	    	end
 		    redirect_to cours_path
 	    else
 	      render :new

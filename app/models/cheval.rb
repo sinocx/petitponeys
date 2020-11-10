@@ -22,4 +22,7 @@ class Cheval < ApplicationRecord
   	def age
   		((Time.zone.now - naissance.to_time) / 1.year.seconds).floor
   	end
+  	def title
+    	"#{id} - #{nom}"
+  	end
 end
