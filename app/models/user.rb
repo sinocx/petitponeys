@@ -8,5 +8,9 @@ class User < ApplicationRecord
   	email
   	
   end
+
+  def title
+    	"#{id} - #{email}"
+  end
   
 end
