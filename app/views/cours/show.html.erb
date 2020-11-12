@@ -2,7 +2,7 @@
 <div class="container">	
 	<div class="col-sm-12">
 	<% if current_user.moniteur = false %>
-		<% if @reservations.user_id = current_user %>
+		<% if @reservation.user_id = current_user %>
 	 		<p>Vous etes deja inscrit</p>	
 	 	<% else %>
 			<%= link_to "s'inscrire", cour_reserv_create_path(@cour,@user), method: :post%>

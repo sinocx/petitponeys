@@ -1,7 +1,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header-transparent">
+  <header id="header" class="header-fixed">
     <div class="container">
 
       <div id="logo" class="pull-left">
@@ -28,19 +28,13 @@
           	<li><a href="cours">Planning</a></li>
           	<li><a href="#contact">Contact</a></li>
           	<li><button type="button" class="btn btn-outline-success" name="connexion">Connexion</button></li>
-			<li><%= button_to "Déconnexion",user_signed_in,method: :delete,class: "btn btn-outline-danger"%></li>
+			<li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
 		  <% end %>          	
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- End Header -->
-
-
-
-  <img src="assets/images/gig_pop.gif" alt="Pop gif">
-
 </body>
 
-<div class="mt-5"></div>
-<div id="calendar"></div>
+<div id="calendar" class="espace"></div>
 
