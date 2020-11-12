@@ -15,20 +15,18 @@
 
           <% if current_user.admin == true %> <!--ADMINISTRATEUR -->
             <li class="menu-active"><a href="/">Accueil</a></li>
-          	<li><a href="/">Portfolio</a></li>
-          	<li><a href="cours">Planning</a></li>
-          	<li><a href="#contact">Contact</a></li>
-          	<li><button type="button" class="btn btn-outline-info">Admin</button></li>
-          	<li><button type="button" class="btn btn-outline-success" name="connexion">Connexion</button></li>
-			<li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
+          	<li><a href="/#portfolio">Portfolio</a></li>
+          	<li><a href="/cours">Planning</a></li>
+          	<li><a href="/#contact">Contact</a></li>
+          	<li><a style="color: orange;" href="/admin" type="button">Admin</a></li>
+			      <li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
 
     	  <% else %> <!--USER OR MONITEUR -->
     	    <li class="menu-active"><a href="/">Accueil</a></li>
-          	<li><a href="/">Portfolio</a></li>
-          	<li><a href="cours">Planning</a></li>
-          	<li><a href="#contact">Contact</a></li>
-          	<li><button type="button" class="btn btn-outline-success" name="connexion">Connexion</button></li>
-			<li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
+          	<li><a href="/#portfolio">Portfolio</a></li>
+          	<li><a href="/cours">Planning</a></li>
+          	<li><a href="/#contact">Contact</a></li>
+			      <li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
 		  <% end %>          	
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -36,5 +34,15 @@
   </header><!-- End Header -->
 </body>
 
-<div id="calendar" class="espace"></div>
+<div class="container">
+  <div class="col-xs-12 col-sm-4 offset-sm-4">
+    <div class="espace" align-items= "right">
+      <% if current_user.admin == true || current_user.moniteur == true%>
+      <%= button_to "Nouveau cours",new_cour_url,method: :get,class: "btn btn-success btn-lg btn-block"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="calendar" ></div>
 

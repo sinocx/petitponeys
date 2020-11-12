@@ -1,39 +1,3 @@
-<!--
-<div class="banner image-accueil ">
-	<div class="banner-content">
-			<h2>Bienvenue au centre équestre PETITPONEYS</h2>
-			<p>Le centre équestre propose des cours d'équitation pour enfants et adultes, du débutant au confirmé, des stages et des participations aux championnats équestres.</p>
-			<% if  user_signed_in? %>
-				<% if current_user.admin == true %>
-					<%= link_to "Gerer les cours", new_user_session_path, class: "button" %>
-				<% end %>
-			<% else %>
-					<%= link_to "Inscrit toi", new_user_session_path, class: "button" %>
-			<% end %>
-		</div>	
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class = "col-lg-4 col-sm-12 info">
-		   <%= image_tag "petitponey.jpg", class: "img-info" %>
-		</div>
-		<div class = "col-lg-4 col-sm-12 info">
-		   <%= image_tag "petitponey.jpg", class: "img-info" %>
-	    </div>
-		<div class = "col-lg-4 col-sm-12 info">
-		   <%= image_tag "petitponey.jpg", class: "img-info" %>
-	    </div>
-	</div>
-</div>-->
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,34 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <!--<title>Regna Bootstrap Template</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">-->
-
-  <!-- Favicons -->
-  <!--<link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <!--<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">-->
 
-  <!-- Template Main CSS File -->
-  <!--<link href="assets/stylesheets/home_style.css" rel="stylesheet">-->
-
-  <!-- =======================================================
-  * Template Name: Regna - v2.1.0
-  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -78,8 +19,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <!--<a href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
-        <!-- Uncomment below if you prefer to use a text logo -->
+
         <h1><a href="/">PETIT PONEY</a></h1>
       </div>
 
@@ -89,11 +29,10 @@
         <% if user_signed_in? %> <!--CONNECTE-->
           <% if current_user.admin == true %> <!--ADMINISTRATEUR -->
             <li class="menu-active"><a href="/">Accueil</a></li>
-          	<li><a href="/">Portfolio</a></li>
-          	<li><a href="cours">Planning</a></li>
-          	<li><a href="#contact">Contact</a></li>
-          	<li><button type="button" class="btn btn-outline-info">Admin</button></li>
-          	<li><button type="button" class="btn btn-outline-success" name="connexion">Connexion</button></li>
+          	<li><a href="/#portfolio">Portfolio</a></li>
+          	<li><a href="/cours">Planning</a></li>
+          	<li><a href="/#contact">Contact</a></li>
+          	<li><a style="color: orange;" href="/admin" type="button">Admin</a></li>
 			<li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
 
     	  <% else %> <!--USER OR MONITEUR -->
@@ -101,7 +40,6 @@
           	<li><a href="/">Portfolio</a></li>
           	<li><a href="cours">Planning</a></li>
           	<li><a href="#contact">Contact</a></li>
-          	<li><button type="button" class="btn btn-outline-success" name="connexion">Connexion</button></li>
 			<li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
 		  <% end %>
 		<% else %> <!--PAS CONNECTE-->
@@ -122,7 +60,7 @@
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Bienvenue au centre équestre PETIT PONEY</h1>
       <h2>Le centre équestre propose des cours d'équitation pour enfants et adultes, du débutant au confirmé, des stages et des participations aux championnats équestres.</h2>
-      <a href="users/sign_in" class="btn-get-started">Découvrir</a>
+      <a href="users/sign_up" class="btn-get-started">Découvrir</a>
     </div>
   </section><!-- End Hero Section -->
 

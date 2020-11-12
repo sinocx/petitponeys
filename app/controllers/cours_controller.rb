@@ -18,7 +18,7 @@ class CoursController < ApplicationController
 	    @cour = Cour.new(cour_params)
 	    @cour.user = current_user
 	    if @cour.save
-	    	params[:place].times do |i|
+	    	params[:place] do |i|
 	    		rc = ReservationCheval.create()
 	    		rc.save
 	    	end

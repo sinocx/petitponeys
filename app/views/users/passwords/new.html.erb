@@ -1,18 +1,52 @@
-<h2>Forgot your password?</h2>
+<!-- ======= Header ======= -->
+  <header id="header" class="header-fixed">
+    <div class="container">
 
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
+      <div id="logo" class="pull-left">
+        <h1><a href="/">PETIT PONEY</a></h1>
+      </div>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-  </div>
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
+            <li class="menu-active"><a href="/">Accueil</a></li>
+            <li><a href="/#portfolio">Portfolio</a></li>
+            <li><a href="/cours">Planning</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><%= button_to "Connexion",new_user_session_path,method: :get,class: "btn btn-outline-success"%></li>
+            
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+
+
+ <div class="espace"></div>
+ <div class="container">
+  <div class="row mt-5">
+    <div class="col-xs-12 col-sm-4 offset-sm-4">
+      <div class="form-login">
+        <h2 style="color: white;">Réinitialiser le mot de passe</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Réinitialiser",class: "btn btn-success" %>
+          </div>
+          <%= render "users/shared/links" %>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
 
-<%= render "users/shared/links" %>
+        
