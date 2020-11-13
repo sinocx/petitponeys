@@ -18,10 +18,6 @@ class CoursController < ApplicationController
 	    @cour = Cour.new(cour_params)
 	    @cour.user = current_user
 	    if @cour.save
-	    	@cour.book.times do |i|
-	    		rc = ReservationCheval.create()
-	    		rc.save
-	    	end
 		    redirect_to cours_path
 	    else
 	      render :new

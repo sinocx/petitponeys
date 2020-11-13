@@ -1,1 +1,48 @@
-<div id="calendar"></div>
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header-fixed">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!--<a href="index.html"><img src="assets/images/logo.png" alt=""></a>-->
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="/">PETIT PONEY</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+
+          <% if current_user.admin == true %> <!--ADMINISTRATEUR -->
+            <li class="menu-active"><a href="/">Accueil</a></li>
+          	<li><a href="/#portfolio">Portfolio</a></li>
+          	<li><a href="/cours">Planning</a></li>
+          	<li><a href="/#contact">Contact</a></li>
+          	<li><a style="color: orange;" href="/admin" type="button">Admin</a></li>
+			      <li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
+
+    	  <% else %> <!--USER OR MONITEUR -->
+    	    <li class="menu-active"><a href="/">Accueil</a></li>
+          	<li><a href="/#portfolio">Portfolio</a></li>
+          	<li><a href="/cours">Planning</a></li>
+          	<li><a href="/#contact">Contact</a></li>
+			      <li><%= button_to "Déconnexion",destroy_user_session_path,method: :delete,class: "btn btn-outline-danger"%></li>
+		  <% end %>          	
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+</body>
+
+<div class="container">
+  <div class="col-xs-12 col-sm-4 offset-sm-4">
+    <div class="espace" align-items= "right">
+      <% if current_user.admin == true || current_user.moniteur == true%>
+      <%= button_to "Nouveau cours",new_cour_url,method: :get,class: "btn btn-success btn-lg btn-block"%>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div id="calendar" ></div>
+
