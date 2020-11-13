@@ -42,6 +42,8 @@
 				<%= simple_form_for @cour, url: cours_path, method: :post,  remote: true do |f| %>
 				   <%= f.error_notification %>
 				   <%= f.input :title%>
+				   <%= f.input :niveau%>
+				   <%= f.input :place%>
 				   <%= f.input :start_time%>
 				   <%= f.input :end_time%>
 				   <%= f.input :description%>
