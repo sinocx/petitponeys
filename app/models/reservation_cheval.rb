@@ -1,6 +1,8 @@
 class ReservationCheval < ApplicationRecord
-  belongs_to :cheval
-  belongs_to :user
-  belongs_to :cour
-
+  belongs_to :cheval, optional: true
+  belongs_to :user, optional: true
+  belongs_to :cour, optional: true
+  def title
+    
+  end
 end

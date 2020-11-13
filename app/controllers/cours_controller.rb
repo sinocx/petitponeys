@@ -18,7 +18,7 @@ class CoursController < ApplicationController
 	    @cour = Cour.new(cour_params)
 	    @cour.user = current_user
 	    if @cour.save
-	    	params[:place].times do |i|
+	    	@cour.book.times do |i|
 	    		rc = ReservationCheval.create()
 	    		rc.save
 	    	end
@@ -29,8 +29,7 @@ class CoursController < ApplicationController
 	end
   
 	def update
-	@cour = Cour.find(params[:id])
-
+	    @cour = Cour.find(params[:id])
 		if @Cour.update(cour_params)
 		  redirect_to cour_path(@cour)
 		else

@@ -9,4 +9,7 @@ class Cour < ApplicationRecord
 	def custom_label_method
 		self.email
 	end
+	def title
+    	"#{start_time} - #{nom}"
+  	end
 end
