@@ -10,6 +10,6 @@ class Cour < ApplicationRecord
 		self.email
 	end
 	def title
-    	"#{start_time} - #{nom}"
+    	"#{start_time} - #{id}"
   	end
 end
